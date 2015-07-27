@@ -1,0 +1,1206 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"new",
+				"new_game_state"
+			],
+			[
+				"diag",
+				"diagonals"
+			],
+			[
+				"game",
+				"game_board"
+			],
+			[
+				"mine",
+				"minesweeper"
+			],
+			[
+				"ad",
+				"adjacent_mine_count"
+			],
+			[
+				"possi",
+				"possible_game"
+			],
+			[
+				"curr",
+				"current_player"
+			],
+			[
+				"set",
+				"set_position"
+			],
+			[
+				"free",
+				"free_positions"
+			],
+			[
+				"H",
+				"HTMLGreeting	(Greetr.js)"
+			],
+			[
+				"fir",
+				"firstNameProperty"
+			],
+			[
+				"aver",
+				"averate_rating	(recipe.rb)"
+			],
+			[
+				"mod",
+				"mod	module .. end"
+			],
+			[
+				"ffs",
+				"ffs	form_for submit"
+			],
+			[
+				"thum",
+				"thumbs_down	(show.html.erb)"
+			],
+			[
+				"thums",
+				"thumbs_up	(show.html.erb)"
+			],
+			[
+				"recipe",
+				"recipe_params"
+			],
+			[
+				"grav",
+				"gravatar_url"
+			],
+			[
+				"ga",
+				"gravatar_id"
+			],
+			[
+				"do",
+				"dow	downto(0) { |n| .. }"
+			],
+			[
+				"valid",
+				"valid_addresses"
+			],
+			[
+				"ca",
+				"cla	class .. end"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"f",
+				"for	for (…) {…} (Improved Native For-Loop)"
+			],
+			[
+				"F",
+				"FRAME	Tag"
+			],
+			[
+				"max",
+				"max_subarray_sum"
+			],
+			[
+				"stock",
+				"stock_picker_nonrecursive"
+			],
+			[
+				"sub",
+				"subarray_sum"
+			],
+			[
+				"subarrays",
+				"sub_arrays"
+			],
+			[
+				"vowels",
+				"vowels_only"
+			],
+			[
+				"vowel",
+				"vowels_only"
+			],
+			[
+				"cat",
+				"cats_with_hats"
+			],
+			[
+				"arr",
+				"array_addition"
+			],
+			[
+				"ari",
+				"arith_geo"
+			],
+			[
+				"reve",
+				"reverse_str"
+			],
+			[
+				"right",
+				"right_start"
+			],
+			[
+				"lef",
+				"left_profit"
+			],
+			[
+				"left",
+				"left_profit"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 398.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Pac",
+				"Package Control: Install Package"
+			],
+			[
+				"Pack",
+				"Package Control: Remove Package"
+			],
+			[
+				"Rea",
+				"ReadmePlease"
+			],
+			[
+				"Read",
+				"ReadmePlease"
+			],
+			[
+				"Pa",
+				"Package Control: Install Package"
+			],
+			[
+				"Syntas M",
+				"Syntax Manager: Reload Settings"
+			],
+			[
+				"COl",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"Package",
+				"Package Control: Install Package"
+			],
+			[
+				"rea",
+				"ReadmePlease"
+			],
+			[
+				"Hype",
+				"Hyperlink Helper: Lookup with Google & Link"
+			],
+			[
+				"Packag",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"snip",
+				"Snippet: if"
+			],
+			[
+				"Set Syntax: JavaS",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"co",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"colo",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"Co",
+				"Colorsublime: Browse Themes"
+			],
+			[
+				"Packa",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control",
+				"Package Control: List Packages"
+			],
+			[
+				"selection",
+				"Rot13 Selection"
+			],
+			[
+				"cc",
+				"Convert Case: Upper Case"
+			],
+			[
+				"Package Control: In",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: Li",
+				"Package Control: List Packages"
+			],
+			[
+				"Package Con",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: Insall Package",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: List Packages",
+				"Package Control: List Packages"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 599.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"for x in range(10):",
+			"print('f')",
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/jmenestr/Desktop/App Academy Prep"
+	],
+	"file_history":
+	[
+		"/Users/jmenestr/Desktop/Connect4/human_player.rb",
+		"/Users/jmenestr/Desktop/Connect4/test.rb",
+		"/Users/jmenestr/Desktop/TicTacToe/tictactoe_noAI.rb",
+		"/Users/jmenestr/Desktop/TicTacToe/test.rb",
+		"/Users/jmenestr/Desktop/TicTacToe/board.rb",
+		"/Users/jmenestr/Desktop/TicTacToe/game.rb",
+		"/Users/jmenestr/Desktop/TicTacToe/tictactoe.rb",
+		"/Users/jmenestr/Desktop/TicTacToe/computer_player.rb",
+		"/Users/jmenestr/Desktop/TicTacToe/human_player.rb",
+		"/Users/jmenestr/Desktop/TicTacToe/TTT.rb",
+		"/Users/jmenestr/Desktop/TicTacToe/ticTacToe.rb",
+		"/Users/jmenestr/Desktop/BackboneJs/Boilerplate/index.html",
+		"/Users/jmenestr/Desktop/BackboneJs/Boilerplate/js/main.js",
+		"/Users/jmenestr/Desktop/BackboneJs/Boilerplate/js/lib/backbone-min.js",
+		"/Users/jmenestr/Desktop/BackboneJs/Boilerplate/js/lib/underscore-min.js",
+		"/Users/jmenestr/Desktop/BackboneJs/Boilerplate/js/lib/modernizr-2.6.2.min.js",
+		"/Users/jmenestr/Desktop/BackboneJs/Boilerplate/js/lib/jquery-min.js",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/J7_LetsUseOurFramework/Starter/index.html",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/J7_LetsUseOurFramework/Starter/Greetr.js",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/J7_LetsUseOurFramework/Starter/app.js",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/J5_AddingJQuerySupport/Starter/app.js",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/J5_AddingJQuerySupport/Starter/Greetr.js",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/J2_StructuringSafeCode/Starter/index.html",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/J2_StructuringSafeCode/Starter/app.js",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/J2_StructuringSafeCode/Starter/Greetr.js",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/J2_StructuringSafeCode/Starter/jquery-1.11.2.js",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/greeter.js",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/Open Source Code/I2_DeepDiveJQuery/app.js",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/Open Source Code/I2_DeepDiveJQuery/index.html",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/Open Source Code/I2_DeepDiveJQuery/jquery-1.11.2.js",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/Objects and Functions/H2_typeofinstanceof/app.js",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/Objects and Functions/F5_ObjectCreateAndPrototypal/Starter/app.js",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/Objects and Functions/F5_ObjectCreateAndPrototypal/Starter/index.html",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/Objects and Functions/F1_FunctionConstructorsNewHistory/Starter/app.js",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/Objects and Functions/F1_FunctionConstructorsNewHistory/Starter/index.html",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/Objects and Functions/D20_FunctionalProgramming/Starter/underscore.js",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/Objects and Functions/D20_FunctionalProgramming/Starter/index.html",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/Objects and Functions/D20_FunctionalProgramming/Starter/app.js",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/Objects and Functions/D19_CallApplyBind/Starter/index.html",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/Objects and Functions/D19_CallApplyBind/Starter/app.js",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/Objects and Functions/D18_ClosuresAndCallbacks/Starter/index.html",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/Objects and Functions/D18_ClosuresAndCallbacks/Starter/app.js",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/Objects and Functions/D17_FunctionFactories/Starter/index.html",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/Objects and Functions/D17_FunctionFactories/Starter/app.js",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/Objects and Functions/D16b_ClosuresPart2/Starter/index.html",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/Objects and Functions/D16b_ClosuresPart2/Starter/app.js",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/Objects and Functions/D16_Closures/Starter/app.js",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/Objects and Functions/D16_Closures/Starter/index.html",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/Objects and Functions/D14_IIFEs/Starter/index.html",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/Objects and Functions/D14_IIFEs/Starter/app.js",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/Objects and Functions/D9_FunctionOverloading/Starter/app.js",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/Objects and Functions/D8_Arguments/Starter/index.html",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/Objects and Functions/D8_Arguments/Starter/app.js",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/Objects and Functions/D7_ObjectFunctionsAndThis/Starter/index.html",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/Objects and Functions/D7_ObjectFunctionsAndThis/Starter/app.js",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/Objects and Functions/D6_FunctionExpressions/Starter/index.html",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/Objects and Functions/D6_FunctionExpressions/Starter/app.js",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/Objects and Functions/D5_FunctionsAreObjects/Starter/app.js",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/Objects and Functions/D5_FunctionsAreObjects/Starter/index.html",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/Objects and Functions/D4_JSON/Starter/index.html",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/Objects and Functions/D4_JSON/Starter/app.js",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/Objects and Functions/D3_FakingNamespaces/Starter/app.js",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/Objects and Functions/D2_ObjectLiterals/Starter/index.html",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/Objects and Functions/D2_ObjectLiterals/Starter/app.js",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/Objects and Functions/D1_ObjectsAndTheDot/Starter/index.html",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/Objects and Functions/D1_ObjectsAndTheDot/Starter/app.js",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/Framework Aside/lib2.js",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/Framework Aside/app.js",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/Framework Aside/lib1.js",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/Framework Aside/index.html",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/Starter/app.js",
+		"/Users/jmenestr/Desktop/Understanding Javascript/B3_GlobalEnvironment/Starter/index.html",
+		"/Users/jmenestr/Desktop/eloquent_js/ch4/index.html",
+		"/Users/jmenestr/Desktop/eloquent_js/ch4/script.js",
+		"/Users/jmenestr/Downloads/Ex_Files_CSS_LESS_SASS/Exercise Files/Ch5/index.html",
+		"/Users/jmenestr/Downloads/Ex_Files_CSS_LESS_SASS/Exercise Files/Ch5/mixargs_styles.css",
+		"/Users/jmenestr/Downloads/Ex_Files_CSS_LESS_SASS/Exercise Files/Ch5/mixargs_styles.scss",
+		"/Users/jmenestr/Downloads/Ex_Files_CSS_LESS_SASS/Exercise Files/Ch5/SASS_SampleDoc.html",
+		"/Users/jmenestr/Downloads/Ex_Files_CSS_LESS_SASS/Exercise Files/Ch5/import_styles.scss",
+		"/Users/jmenestr/Downloads/Ex_Files_CSS_LESS_SASS/Exercise Files/Ch4/SASS_SampleDoc.html",
+		"/Users/jmenestr/Downloads/Ex_Files_CSS_LESS_SASS/Exercise Files/Ch4/ops_styles.css",
+		"/Users/jmenestr/Downloads/Ex_Files_CSS_LESS_SASS/Exercise Files/Ch4/ops_styles.scss",
+		"/Users/jmenestr/Downloads/Ex_Files_CSS_LESS_SASS/Exercise Files/Ch4/mixin_styles.scss",
+		"/Users/jmenestr/Downloads/Ex_Files_CSS_LESS_SASS/Exercise Files/Ch4/mixin_styles.css",
+		"/Users/jmenestr/Downloads/Ex_Files_CSS_LESS_SASS/Exercise Files/Ch4/nested_styles.css",
+		"/Users/jmenestr/Downloads/Ex_Files_CSS_LESS_SASS/Exercise Files/Ch4/nested_styles.scss",
+		"/Users/jmenestr/Downloads/Ex_Files_CSS_LESS_SASS/Exercise Files/Ch4/var_styles.scss",
+		"/Users/jmenestr/Downloads/Ex_Files_CSS_LESS_SASS/Exercise Files/Ch1/styles.css",
+		"/Users/jmenestr/Downloads/Ex_Files_CSS_LESS_SASS/Exercise Files/Ch1/FirstSassExample.html",
+		"/Users/jmenestr/Downloads/Ex_Files_CSS_LESS_SASS/Exercise Files/Ch1/FirstLessExample.html",
+		"/Users/jmenestr/Downloads/Ex_Files_CSS_LESS_SASS/Exercise Files/Ch2/LESS_SampleDoc.html",
+		"/Users/jmenestr/Downloads/Ex_Files_CSS_LESS_SASS/Exercise Files/less.js",
+		"/Users/jmenestr/Downloads/Ex_Files_CSS_LESS_SASS/Exercise Files/Ch1/styles.less",
+		"/Users/jmenestr/Downloads/Ex_Files_CSS_LESS_SASS/Exercise Files/Ch1/styles.scss",
+		"/Users/jmenestr/Downloads/less.min.js",
+		"/Users/jmenestr/Downloads/Ex_Files_UaR_Foundation5/Exercise Files/Chapter 1/01_05/grid.html",
+		"/Users/jmenestr/Desktop/rails_apps/yelpdemo/config/routes.rb",
+		"/Users/jmenestr/Desktop/rails_apps/yelpdemo/app/controllers/restaurants_controller.rb",
+		"/Users/jmenestr/Desktop/rails_apps/yelpdemo/app/views/restaurants/index.html.erb",
+		"/Users/jmenestr/Desktop/rails_apps/yelpdemo/app/views/layouts/_nav.html.erb",
+		"/Users/jmenestr/Desktop/rails_apps/yelpdemo/app/views/restaurants/_form.html.erb",
+		"/Users/jmenestr/Desktop/rails_apps/yelpdemo/db/migrate/20150615225741_create_restaurants.rb",
+		"/Users/jmenestr/Desktop/rails_apps/yelpdemo/app/views/layouts/application.html.erb",
+		"/Users/jmenestr/Desktop/rails_apps/yelpdemo/app/assets/stylesheets/custom.css.scss",
+		"/Users/jmenestr/Desktop/rails_apps/yelpdemo/app/views/pages/contact.html.erb",
+		"/Users/jmenestr/Desktop/rails_apps/yelpdemo/app/views/pages/about.html.erb",
+		"/Users/jmenestr/Desktop/rails_apps/yelpdemo/Gemfile",
+		"/Users/jmenestr/Desktop/rails_apps/yelpdemo/app/assets/stylesheets/application.css.scss",
+		"/Users/jmenestr/Desktop/rails_apps/yelpdemo/app/assets/javascripts/application.js",
+		"/Users/jmenestr/Desktop/rails_apps/chef_app/app/controllers/recipes_controller.rb",
+		"/Users/jmenestr/Desktop/rails_apps/chef_app/app/views/recipes/like.js.erb",
+		"/Users/jmenestr/Desktop/rails_apps/chef_app/app/views/shared/_likes.html.erb",
+		"/Users/jmenestr/Desktop/rails_apps/chef_app/app/controllers/likes_controller.rb",
+		"/Users/jmenestr/Desktop/rails_apps/chef_app/app/models/like.rb",
+		"/Users/jmenestr/Desktop/rails_apps/chef_app/app/views/recipes/index.html.erb",
+		"/Users/jmenestr/Desktop/rails_apps/chef_app/app/views/recipes/like_count.js.erb",
+		"/Users/jmenestr/Desktop/rails_apps/chef_app/app/views/recipes/_review_form.html.erb",
+		"/Users/jmenestr/Desktop/rails_apps/chef_app/app/views/recipes/show.html.erb",
+		"/Users/jmenestr/Desktop/rails_apps/chef_app/app/models/recipe.rb",
+		"/Users/jmenestr/Desktop/rails_apps/chef_app/app/views/ratings/update.js.erb",
+		"/Users/jmenestr/Desktop/rails_apps/chef_app/app/assets/stylesheets/custom.css.scss",
+		"/Users/jmenestr/Desktop/rails_apps/chef_app/app/models/review.rb",
+		"/Users/jmenestr/Desktop/rails_apps/chef_app/app/controllers/ratings_controller.rb",
+		"/Users/jmenestr/Desktop/rails_apps/chef_app/app/assets/javascripts/application.js",
+		"/Users/jmenestr/Desktop/rails_apps/chef_app/config/routes.rb",
+		"/Users/jmenestr/Desktop/rails_apps/chef_app/app/models/rating.rb",
+		"/Users/jmenestr/Desktop/rails_apps/chef_app/db/migrate/20150613031454_create_ratings.rb",
+		"/Users/jmenestr/Desktop/rails_apps/chef_app/db/migrate/20150613031250_remove_rating_from_reviews.rb"
+	],
+	"find":
+	{
+		"height": 30.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"",
+			"<current file>"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"game_board",
+			"marker",
+			"col_sep",
+			"\n  ",
+			"Board.new",
+			"board",
+			"maker",
+			"require",
+			"Set",
+			"set_position!",
+			"marker",
+			"return self",
+			"max",
+			"self.over?",
+			"\"x\"",
+			"move",
+			"player_",
+			"Backbone.Model",
+			"initialize",
+			"Backbone.Model",
+			"new ",
+			"new child",
+			"Surrogate",
+			"initialize",
+			"iinitialize",
+			"protoProps",
+			"extend: ",
+			"extend",
+			"extend:",
+			"Model.extend",
+			"root.Backbone",
+			"window.Backbone",
+			"Model.extend",
+			"Model",
+			".init",
+			"addClass",
+			"jQuery.addClass",
+			".addClass",
+			"jQuery.fn.init",
+			"init = ",
+			"initalize",
+			"jQuery.find",
+			"Sizzle",
+			"jQuery.each =",
+			"jQuery.each",
+			".each",
+			".extend",
+			".init",
+			"module",
+			"NoGlobal",
+			"jQuery",
+			"window.$",
+			"jQuery.fn",
+			"jQuery.prototype",
+			"window.$",
+			".fn.init",
+			"identity",
+			"iden",
+			"_.map",
+			"):",
+			"#star",
+			"div",
+			"recipe",
+			"review",
+			"Review",
+			"edit",
+			"cb",
+			"style",
+			"div",
+			"end",
+			"style",
+			"require_correct_user",
+			"@recipe = Recipe.find",
+			"%>\n",
+			"recipe",
+			"recipes",
+			"thumbs_down_total",
+			"div",
+			"PictureUploader",
+			"@recipe",
+			"well",
+			"Description",
+			"description",
+			"p",
+			") ",
+			"p",
+			"      \n",
+			"name",
+			"email",
+			"p",
+			"h2",
+			"sprockets",
+			"p",
+			"section",
+			"head",
+			"com",
+			"arg",
+			"&rsquo;",
+			"<p>",
+			"section",
+			"class",
+			" \n",
+			"class",
+			"id=",
+			"<<",
+			"span",
+			"defaultTab",
+			"this",
+			"about",
+			"=\"",
+			"header",
+			"hea",
+			"head",
+			"(he)+",
+			"songPlaying",
+			");\n",
+			"}",
+			";\n",
+			".table > thead > tr > th",
+			".table ",
+			".table",
+			"table",
+			"<img",
+			"img",
+			"pull-right",
+			"visible-lg",
+			")\n",
+			"login_url"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"board",
+			"chefname",
+			"audioPlayer",
+			"<img class='img-responsive'",
+			"img class='img-responsive'"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": false,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 140.0
+	},
+	"output.find_results":
+	{
+		"height": 244.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 140.0
+	},
+	"pinned_build_system": "",
+	"project": "aA_prep.sublime-project",
+	"replace":
+	{
+		"height": 56.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"nav",
+				"app/views/layouts/_nav.html.erb"
+			],
+			[
+				"routes",
+				"config/routes.rb"
+			],
+			[
+				"res",
+				"app/controllers/restaurants_controller.rb"
+			],
+			[
+				"create",
+				"db/migrate/20150615225741_create_restaurants.rb"
+			],
+			[
+				"gemf",
+				"Gemfile"
+			],
+			[
+				"gem",
+				"Gemfile"
+			],
+			[
+				".css",
+				"app/assets/stylesheets/application.css.scss"
+			],
+			[
+				"ge",
+				"Gemfile"
+			],
+			[
+				"app",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"cont",
+				"app/views/pages/contact.html.erb"
+			],
+			[
+				"about",
+				"app/views/pages/about.html.erb"
+			],
+			[
+				"rou",
+				"config/routes.rb"
+			],
+			[
+				"like",
+				"app/models/like.rb"
+			],
+			[
+				"recipe",
+				"app/controllers/recipes_controller.rb"
+			],
+			[
+				"inde",
+				"app/views/recipes/index.html.erb"
+			],
+			[
+				"recipe_co",
+				"app/controllers/recipes_controller.rb"
+			],
+			[
+				"lik",
+				"app/views/shared/_likes.html.erb"
+			],
+			[
+				"reeview",
+				"app/views/recipes/_review_form.html.erb"
+			],
+			[
+				"show",
+				"app/views/recipes/show.html.erb"
+			],
+			[
+				"recipes",
+				"app/controllers/recipes_controller.rb"
+			],
+			[
+				"cus",
+				"app/assets/stylesheets/custom.css.scss"
+			],
+			[
+				"recip",
+				"app/models/recipe.rb"
+			],
+			[
+				"rat",
+				"app/models/rating.rb"
+			],
+			[
+				"review",
+				"app/models/review.rb"
+			],
+			[
+				"recipe.r",
+				"app/models/recipe.rb"
+			],
+			[
+				"ratings",
+				"app/controllers/ratings_controller.rb"
+			],
+			[
+				"recipe.rb",
+				"app/models/recipe.rb"
+			],
+			[
+				"create_rat",
+				"db/migrate/20150613031454_create_ratings.rb"
+			],
+			[
+				"r_re",
+				"app/views/recipes/_review_form.html.erb"
+			],
+			[
+				"chef",
+				"app/models/chef.rb"
+			],
+			[
+				"rating",
+				"app/models/rating.rb"
+			],
+			[
+				"createrating",
+				"db/migrate/20150613031454_create_ratings.rb"
+			],
+			[
+				"remove",
+				"db/migrate/20150613031250_remove_rating_from_reviews.rb"
+			],
+			[
+				"index",
+				"app/views/recipes/index.html.erb"
+			],
+			[
+				"appli",
+				"app/controllers/application_controller.rb"
+			],
+			[
+				"_revi",
+				"app/views/reviews/_review.html.erb"
+			],
+			[
+				"reci",
+				"app/controllers/recipes_controller.rb"
+			],
+			[
+				"chef_co",
+				"app/controllers/chefs_controller.rb"
+			],
+			[
+				"_at",
+				"app/views/recipes/_attributes.html.erb"
+			],
+			[
+				"_st",
+				"app/views/styles/_style.html.erb"
+			],
+			[
+				"att",
+				"app/views/recipes/_attributes.html.erb"
+			],
+			[
+				"attri",
+				"app/views/recipes/_attributes.html.erb"
+			],
+			[
+				"review_t",
+				"test/models/review_test.rb"
+			],
+			[
+				"chef.rb",
+				"app/models/chef.rb"
+			],
+			[
+				"",
+				"Gemfile"
+			],
+			[
+				"reviews",
+				"db/migrate/20150612185807_create_reviews.rb"
+			],
+			[
+				"reve",
+				"test/models/review_test.rb"
+			],
+			[
+				"revi",
+				"test/models/review_test.rb"
+			],
+			[
+				"reciep",
+				"app/models/recipe.rb"
+			],
+			[
+				"create_review",
+				"db/migrate/20150612182244_create_reviews_table.rb"
+			],
+			[
+				"g",
+				"Gemfile"
+			],
+			[
+				"create_re",
+				"db/migrate/20150604012336_create_recipes.rb"
+			],
+			[
+				".todo",
+				"features.todo"
+			],
+			[
+				"error",
+				"app/views/shared/_errors.html.erb"
+			],
+			[
+				"form",
+				"app/views/chefs/_form.html.erb"
+			],
+			[
+				"recipe/show",
+				"app/views/recipes/show.html.erb"
+			],
+			[
+				"add_ad",
+				"db/migrate/20150612063752_add_admin_to_chefs.rb"
+			],
+			[
+				"_form",
+				"app/views/recipes/_form.html.erb"
+			],
+			[
+				"ingre",
+				"app/controllers/ingredients_controller.rb"
+			],
+			[
+				"styles",
+				"app/controllers/styles_controller.rb"
+			],
+			[
+				"seed",
+				"db/seeds.rb"
+			],
+			[
+				"shared/likes",
+				"app/views/shared/_likes.html.erb"
+			],
+			[
+				"che",
+				"app/controllers/chefs_controller.rb"
+			],
+			[
+				"_in",
+				"app/views/ingredients/_ingredient.html.erb"
+			],
+			[
+				"_ingre",
+				"app/views/ingredients/_ingredient.html.erb"
+			],
+			[
+				"_sty",
+				"app/views/styles/_style.html.erb"
+			],
+			[
+				"_styl",
+				"app/views/styles/_style.html.erb"
+			],
+			[
+				"ingredients_c",
+				"app/controllers/ingredients_controller.rb"
+			],
+			[
+				"new",
+				"app/views/styles/new.html.erb"
+			],
+			[
+				"re",
+				"app/controllers/recipes_controller.rb"
+			],
+			[
+				"sche",
+				"db/schema.rb"
+			],
+			[
+				"create_rec",
+				"db/migrate/20150610010513_create_recipe_styles.rb"
+			],
+			[
+				"ing",
+				"app/models/ingredient.rb"
+			],
+			[
+				"sty",
+				"app/models/style.rb"
+			],
+			[
+				"create_i",
+				"db/migrate/20150610010111_create_ingredients.rb"
+			],
+			[
+				"create_st",
+				"db/migrate/20150610005835_create_styles.rb"
+			],
+			[
+				"uplo",
+				"app/uploaders/picture_uploader.rb"
+			],
+			[
+				"tit",
+				"app/views/shared/_title.html.erb"
+			],
+			[
+				"ind",
+				"app/views/chefs/index.html.erb"
+			],
+			[
+				"chef_con",
+				"app/controllers/chefs_controller.rb"
+			],
+			[
+				"stat",
+				"app/controllers/static_pages_controller.rb"
+			],
+			[
+				"applic",
+				"app/controllers/application_controller.rb"
+			],
+			[
+				"chef_c",
+				"app/controllers/chefs_controller.rb"
+			],
+			[
+				"ro",
+				"config/routes.rb"
+			],
+			[
+				"home",
+				"app/views/static_pages/home.html.erb"
+			],
+			[
+				"appo",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"rout",
+				"config/routes.rb"
+			],
+			[
+				"rec",
+				"app/controllers/recipes_controller.rb"
+			],
+			[
+				"_for",
+				"app/views/recipes/_form.html.erb"
+			],
+			[
+				"for",
+				"app/views/recipes/_form.html.erb"
+			],
+			[
+				"home.",
+				"app/views/static_pages/home.html.erb"
+			],
+			[
+				"add",
+				"db/migrate/20150608220540_add_password_digest_to_chefs.rb"
+			],
+			[
+				".i",
+				".gitignore"
+			],
+			[
+				"see",
+				"db/seeds.rb"
+			],
+			[
+				"show.",
+				"app/views/recipes/show.html.erb"
+			],
+			[
+				"creat",
+				"db/migrate/20150605213505_create_likes.rb"
+			],
+			[
+				"en",
+				"config/environment.rb"
+			],
+			[
+				"add_pi",
+				"db/migrate/20150605181528_add_picture_to_recipes.rb"
+			],
+			[
+				"err",
+				"app/views/shared/_errors.html.erb"
+			],
+			[
+				"edit",
+				"app/views/recipes/edit.html.erb"
+			],
+			[
+				"applicatio",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"applica",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"application",
+				"app/helpers/application_helper.rb"
+			],
+			[
+				"chef.r",
+				"app/models/chef.rb"
+			],
+			[
+				"add_chef",
+				"db/migrate/20150604182151_add_chef_id_to_recipes.rb"
+			],
+			[
+				"migration",
+				"db/migrate/20150604061618_add_index_to_chefs.rb"
+			],
+			[
+				"chef_t",
+				"test/models/chef_test.rb"
+			],
+			[
+				"read",
+				"README.md"
+			],
+			[
+				"gefil.l",
+				"Gemfile.lock"
+			],
+			[
+				"ho",
+				"app/views/static_pages/home.html.erb"
+			],
+			[
+				"application.h",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"hom",
+				"app/views/static_pages/home.html.erb"
+			],
+			[
+				"static",
+				"app/controllers/static_pages_controller.rb"
+			],
+			[
+				"rea",
+				"README.md"
+			],
+			[
+				"in",
+				"roux_website/index.htm"
+			],
+			[
+				"ma",
+				"roux_website/_css/main.css"
+			],
+			[
+				"main",
+				"roux_website/_css/main.css"
+			],
+			[
+				"f",
+				"roux_website/_fonts/Bitter OFL SIL Font License 1.1.txt"
+			],
+			[
+				"spot",
+				"roux_website/spotlight.htm"
+			],
+			[
+				"main.css",
+				"roux_website/_css/main.css"
+			],
+			[
+				"routes.",
+				"roux_website/roux_website.sublime-project"
+			],
+			[
+				"spr",
+				"_scripts/SpryTabbedPanels.js"
+			],
+			[
+				"400",
+				"400.shtml"
+			],
+			[
+				"mai",
+				"_css/main.css"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Desktop/TicTacToe/tictactoe.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 368.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 360.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 259.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
