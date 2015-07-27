@@ -100,11 +100,11 @@
 #       "Hello, #{who}!"
 #     end
 
-require "00_hello"
+require_relative "../00_hello.rb"
 
 describe "the hello function" do
   it "says hello" do
-    expect(hello).to eq("Hello!")
+    puts expect(hello).to eq("Hello!")
   end
 end
 

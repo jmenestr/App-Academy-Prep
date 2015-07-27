@@ -17,8 +17,10 @@
 # In floating point math, there **are** fractions. So...
 #
 #    1.0 / 2.0 => 0.5
+#    
 
-require "01_temperature"
+require_relative '../01_temperature'
+
 
 describe "temperature conversion functions" do
   describe "#ftoc" do

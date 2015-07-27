@@ -21,8 +21,7 @@
 #
 # See <http://en.wikipedia.org/wiki/Pig_latin> for more details.
 
-require "04_pig_latin"
-
+require_relative "../04_pig_latin"
 describe "#translate" do
   it "translates a word beginning with a vowel" do
     s = translate("apple")
@@ -71,4 +70,18 @@ describe "#translate" do
   # Test-driving bonus:
   # * write a test asserting that capitalized words are still capitalized (but with a different initial capital letter, of course)
   # * retain the punctuation from the original phrase
+  it "preserves capitalization of words" do 
+    s = translate("The Quick Brown Fox")
+    expect(s).to eq("Ethay Ickquay Ownbray Oxfay")
+  end
+
+  it "preserves puncuation of words" do 
+    s = translate("the quick, quiet, brown fox")
+    expect(s).to eq("ethay ickquay, ietquay, ownbray oxfay")
+  end
+
+  it "preserves puncuation and capitaliztion of words" do 
+    s = translate("the quick, quiet, Brown Fox")
+    expect(s).to eq("ethay ickquay, ietquay, Ownbray Oxfay")
+  end
 end
