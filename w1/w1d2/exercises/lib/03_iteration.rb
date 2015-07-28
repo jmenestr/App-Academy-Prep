@@ -4,6 +4,7 @@
 # factors of a given number.
 
 def factors(num)
+  (1..num).select {|n| num % n == 0}
 end
 
 # ### Bubble Sort
@@ -47,9 +48,37 @@ end
 
 class Array
   def bubble_sort!
+    return self if length <= 1
+    last = length - 2
+    while last >= 0
+      (0..last).each do |index|
+        if self[index] > self[index + 1]
+          self[index + 1], self[index] =  self[index], self[index + 1]
+        end
+      end
+      last -= 1
+    end
+    self
+  end
+
+  def bubble_sort!(&prc)
+    prc ||= Proc.new {|x,y| x <=> y}
+    return self if length <= 1
+    last = length - 2
+    while last >= 0
+      (0..last).each do |index|
+        if prc.call(self[index],self[index+1]) == 1
+          self[index + 1], self[index] =  self[index], self[index + 1]
+        end
+      end
+      last -= 1
+    end
+    self
   end
 
   def bubble_sort(&prc)
+    ary = self.dup
+    ary.bubble_sort!
   end
 end
 
@@ -67,9 +96,16 @@ end
 # words).
 
 def substrings(string)
+  lets = string.downcase.split("")
+  subsets = []
+  (1..(string.length)).each do |num|
+    lets.each_cons(num).each { |sub| subsets << sub.join("") }
+  end
+  subsets.uniq
 end
 
 def subwords(word, dictionary)
+  substrings(word).select {|word| dictionary.include? word}
 end
 
 # ### Doubler
@@ -77,6 +113,7 @@ end
 # array with the original elements multiplied by two.
 
 def doubler(array)
+  array.map {|nums| nums*2}
 end
 
 # ### My Each
@@ -104,6 +141,12 @@ end
 
 class Array
   def my_each(&prc)
+    index = 0
+    while index < self.length
+      prc.call(self[index])
+      index += 1
+    end
+    self
   end
 end
 
@@ -122,13 +165,25 @@ end
 
 class Array
   def my_map(&prc)
+    result = []
+    my_each {|n| result << prc.call(n)}
+    result
   end
 
   def my_select(&prc)
+    result = []
+    my_each {|n| result << n if prc.call(n)}
+    result
   end
 
   def my_inject(&blk)
+    acc = first
+    drop(1).each do |i|
+      acc = blk.call(acc,i)
+    end
+    acc
   end
+
 end
 
 # ### Concatenate
@@ -141,4 +196,5 @@ end
 # ```
 
 def concatenate(strings)
+  strings.inject(:+)
 end
