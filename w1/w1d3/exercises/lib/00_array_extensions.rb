@@ -5,6 +5,8 @@
 
 class Array
   def sum
+    return 0 if empty?
+    sum = inject(:+)
   end
 end
 
@@ -15,6 +17,13 @@ end
 
 class Array
   def square
+    return self if empty?
+    map {|item| item**2}
+  end
+
+  def square!
+    return self if empty?
+    map! {|item| item**2}
   end
 end
 
@@ -32,6 +41,9 @@ end
 
 class Array
   def my_uniq
+    result = []
+    each {|item| result << item unless result.include? item}
+    result
   end
 end
 
@@ -53,6 +65,19 @@ end
 
 class Array
   def two_sum
+    start = 0
+    pairs = []
+    while start < length - 1
+      current = start + 1
+      while current < length
+        if self[start] + self[current] == 0
+          pairs << [start,current]
+        end
+        current += 1
+      end
+      start += 1
+    end
+    pairs
   end
 end
 
@@ -65,6 +90,22 @@ end
 
 class Array
   def median
+    return nil if empty?
+    return self.first if length == 1
+    sorted = self.sort
+    if length % 2 == 0 #even branch
+      until sorted.length == 2 do
+        sorted.shift
+        sorted.pop
+      end
+      return sorted.inject(:+).to_f/2
+    else # odd branch
+      until sorted.length == 1
+        sorted.shift
+        sorted.pop
+      end
+      return sorted.first
+    end
   end
 end
 
@@ -117,6 +158,16 @@ end
 
 class Array
   def my_transpose
+    columns = self[0].length
+    result = []
+    (0...columns).each do |column|
+      new_row = []
+      self.each do |row|
+        new_row << row[column]
+      end
+      result << new_row
+    end
+    result
   end
 end
 

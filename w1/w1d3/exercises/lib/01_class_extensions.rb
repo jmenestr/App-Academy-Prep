@@ -18,6 +18,20 @@
 
 class String
   def caesar(shift)
+    cypher = ""
+    self.each_char do |char|
+
+      if char == char.upcase
+        base_let = "A".ord
+      else
+        base_let = "a".ord
+      end
+
+      pos = char.ord - base_let
+      new_pos = (shift+pos) % 26
+      cypher << (base_let + new_pos).chr
+    end
+    cypher
   end
 end
 
@@ -35,8 +49,16 @@ end
 # ```
 
 class Hash
+
   def difference(other_hash)
+    all_keys = self.keys + other_hash.keys
+    diff_keys = all_keys.select {|key| all_keys.count(key) == 1}
+    diff_keys.inject({}) do |h,key|
+      h[key] = self.has_key?(key) ? self[key] : other_hash[key]
+      h
+    end
   end
+
 end
 
 # Stringify
@@ -98,7 +120,40 @@ end
 
 class Fixnum
   def stringify(base)
+    result = ""
+    hex_map = {
+      0 => "0",
+      1 => "1",
+      2 => "2",
+      3 => "3",
+      4 => "4",
+      5 => "5",
+      6 => "6",
+      7 => "7",
+      8 => "8",
+      9 => "9",
+      10 => "a",
+      11 => "b",
+      12 => "c",
+      13 => "d",
+      14 => "e",
+      15 => "f"
+
+    }
+    exp = 0
+    until self / (base**exp) == 0
+      power = base**exp
+      key = (self / power) % base
+      if base == 16
+        result += hex_map[key]
+      else
+        result += key.to_s
+      end
+      exp += 1
+    end
+    result.reverse
   end
+
 end
 
 # Bonus: Refactor your `String#caesar` method to work with strings containing
