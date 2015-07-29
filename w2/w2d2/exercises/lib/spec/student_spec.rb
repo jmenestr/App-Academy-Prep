@@ -1,4 +1,4 @@
-require_relative '../lib/student'
+require_relative '../student'
 
 describe Student do
   let(:student) { Student.new("Johnny", "Rocket") }
@@ -61,6 +61,7 @@ describe Student do
         javascript,
         drama
       ])
+      student.courses = [ruby, javascript, drama]
 
       expect(student.course_load).to eq({
         "CS" => 8,

@@ -39,6 +39,117 @@
 # Make sure to run bundle install first! The specs assume you've implemented the
 # methods named above.
 
+# class TowersOfHanoi
+
+#   def initialize
+#     @towers = [
+#                 [3,2,1],
+#                 [],
+#                 []
+#               ]
+#   end
+#   attr_reader :towers
+
+#   def play
+#     loop do
+#       render
+#       break if won?
+#       puts "What tower do you want to choose a disk from?"
+#       from_tower = gets.chomp.to_i 
+#       puts "What tower do you want to move the disk to?"
+#       to_tower = gets.chomp.to_i
+#       move(from_tower, to_tower) if valid_move?(from_tower, to_tower)
+#     end
+#   end
+
+#   def won?
+#     #Game over if the last tower is the initial state 
+#     @towers[1..-1].any? {|tower| tower == [3,2,1]}
+#   end
+
+#   def valid_move?(from_tower, to_tower)
+#     # Not valid if from_tower is empty
+#     # Not valid if to tower is full
+#     # Not valid if disk on to_tower is larger than the disk moved from from_tower
+#     # Check for bounds of input (tower numbers must in witih range of the length of the array)
+#     return false if @towers[from_tower].empty? || (from_tower > 2 or to_tower > 2)
+#     return true if @towers[to_tower].empty? || @towers[to_tower].last > @towers[from_tower].last
+#     false
+#   end
+
+#   def move(from_tower, to_tower)
+#     disk = @towers[from_tower].pop
+#     @towers[to_tower] << disk
+
+#   end
+
+#   def render
+#     system("clear")
+#     self.towers.each_with_index do |tower,i|
+#       print "Tower #{i}: "
+#       tower.each do |disk|
+#         print "#{disk} "
+#       end
+#       print "\n"
+#     end
+#   end
+
+# end
+
+# require 'byebug'
+
 class TowersOfHanoi
 
+  def initialize(disks = 3, towers = 3)
+    @towers = Array.new(towers) {|tower| Array.new}
+    @towers[0] = Array.new(disks) {|i| i + 1}.reverse
+    @winning_tower = Array.new(disks) {|i| i + 1}.reverse
+  end
+  attr_reader :towers
+
+  def play
+    loop do
+      render
+      #ßbyebug
+      break if won?
+      puts "What tower do you want to choose a disk from?"
+      from_tower = gets.chomp.to_i 
+      puts "What tower do you want to move the disk to?"
+      to_tower = gets.chomp.to_i
+      move(from_tower, to_tower) if valid_move?(from_tower, to_tower)
+    end
+  end
+
+  def won?
+    #Game over if the last tower is the initial state 
+    @towers[0].empty? and @towers[1..-1].any? {|tower| tower == @winning_tower}
+  end
+
+  def valid_move?(from_tower, to_tower)
+    # Not valid if from_tower is empty
+    # Not valid if to tower is full
+    # Not valid if disk on to_tower is larger than the disk moved from from_tower
+    # Check for bounds of input (tower numbers must in witih range of the length of the array)
+    return false if @towers[from_tower].empty? || (from_tower > 0 or to_tower > towers.length-1)
+    return true if @towers[to_tower].empty? || @towers[to_tower].last > @towers[from_tower].last
+    false
+  end
+
+  def move(from_tower, to_tower)
+    disk = @towers[from_tower].pop
+    @towers[to_tower].push(disk)
+  end
+
+  def render
+    system("clear")
+    @towers.each_with_index do |tower,i|
+      print "Tower #{i}: "
+      tower.each do |disk|
+        print "#{disk} "
+      end
+      print "\n"
+    end
+  end
+
 end
+
