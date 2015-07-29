@@ -29,6 +29,77 @@
 # all the items of `set1` that aren't in `set2`.
 
 class MyHashSet
+
+  def initialize(set = {})
+    @store = set
+  end
+
+  def insert(el)
+    @store[el] = true
+  end
+
+  def include?(el)
+    return true if @store[el]
+    false
+  end
+
+  def delete(el)
+    if include?(el)
+      @store.delete(el)
+      return true
+    end
+    false
+  end
+
+  def to_a
+    @store.keys
+  end
+
+  def union(set2)
+    combo = (self.to_a + set2.to_a).uniq
+    new_set = MyHashSet.new
+    combo.each {|key| new_set.insert(key)}
+    new_set
+  end
+
+  def intersect(set2)
+    combo = (self.to_a + set2.to_a).uniq
+    new_set = MyHashSet.new
+    combo.each do |key|
+      if self.include?(key) and set2.include?(key)
+        new_set.insert(key)
+      end
+    end
+    new_set
+  end
+
+  def minus(set2)
+    new_set = MyHashSet.new
+    self.to_a.each do |key|
+      if !set2.include?(key)
+        new_set.insert(key)
+      end
+    end
+    new_set
+  end
+
+  def symmetric_difference(set2)
+    combo = (self.to_a + set2.to_a).uniq
+    new_set = MyHashSet.new
+    combo.each do |key|
+      if (self.include?(key) and !set2.include?(key)) or (!self.include?(key) and set2.include?(key))
+        new_set.insert(key)
+      end
+    end
+    new_set
+  end
+
+  def ==(object)
+    if self.to_a.size == object.to_a.size and (to_a - object.to_a == [])
+      return true
+    end
+    false
+  end
 end
 
 # Bonus
