@@ -130,7 +130,7 @@ class TowersOfHanoi
     # Not valid if to tower is full
     # Not valid if disk on to_tower is larger than the disk moved from from_tower
     # Check for bounds of input (tower numbers must in witih range of the length of the array)
-    return false if @towers[from_tower].empty? || (from_tower > 0 or to_tower > towers.length-1)
+    return false if @towers[from_tower].empty? 
     return true if @towers[to_tower].empty? || @towers[to_tower].last > @towers[from_tower].last
     false
   end
@@ -153,3 +153,4 @@ class TowersOfHanoi
 
 end
 
+TowersOfHanoi.new(15,3).play
