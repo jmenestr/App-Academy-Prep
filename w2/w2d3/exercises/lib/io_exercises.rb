@@ -30,3 +30,21 @@ def guessing_game
   end
 end
 
+def shuffled_file(file)
+  extension = File.extname(file)
+  base = File.basename(file, extension)
+  File.open("#{base}-shuffled#{extension}", "w+") do |f|
+    File.open(file,"r").readlines.shuffle.each do |line|
+      f.puts line
+    end
+  end 
+end
+
+def promt_user_for_file
+
+  puts "Enter a file to shuffle"
+  file = gets.chomp
+  return shuffled_file(file) if File.exist?(file)
+end
+
+promt_user_for_file
