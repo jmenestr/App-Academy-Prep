@@ -31,6 +31,13 @@ class Board
     nil
   end
 
+  def print_board
+    display_hash = {nil => " ", X: "X", O: "O"}
+    row_sep = "+--+--+--+"
+    col_sep = "|"
+
+  end
+
   def cols
     cols = [[], [], []]
     grid.each do |row|
