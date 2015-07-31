@@ -23,8 +23,9 @@ class Board
     self[*pos].nil?
   end
 
+  #Takes position as array
   def place_mark(pos,mark)
-    #raise "Position is not empty" if !empty?(pos)
+    raise "Position is not empty" if !empty?(pos)
     self[*pos] = mark
   end
 
@@ -86,4 +87,4 @@ class Board
 
 end
 
-Board.new.print_board
+

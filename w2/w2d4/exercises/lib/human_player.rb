@@ -5,6 +5,7 @@ class HumanPlayer
   end
 
   attr_reader :name
+  attr_accessor :mark
 
   def get_move
     puts "Where would you like to move: "

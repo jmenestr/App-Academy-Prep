@@ -33,61 +33,68 @@ class ComputerPlayer
     # 6. Opposite corner: If the opponent is in the corner, the player plays the opposite corner.
     # 7. Empty corner: The player plays in a corner square.
     # 8. Empty side: The player plays in a middle square on any of the 4 sides.
-    # 
-    return look_for_win if look_for_win
-    return look_for_loss if look_for_loss
-    return look_for_fork if look_for_fork
     
+    return near_wins(mark) if near_wins(mark)
+    return near_wins(other_mark) if near_wins(other_mark)
+    return look_for_fork(other_mark) if look_for_fork(other_mark)
+    return look_for_fork(mark) if look_for_fork(mark) 
+    return center_move if center_move
+    return opposite_corner if opposite_corner
+    random_move
   end
 
+
   private
-
-    def look_for_win
-      #Look for winning move
+    # Method checks to see if there is a winning position held by the computer 
+    # or if there's a winning position the computer has to block for the opponent
+    def near_wins(marker)
       LINES.each do |winning_line|
         markers = group_positions_by_marker(winning_line)
-        if markers[mark].length == 2 and markers.keys.include?(nil)
-          return move_map(markers[nil].first) 
-        end
+        if markers[marker].length == 2 and markers.keys.include?(nil)      
+            return move_map(markers[nil].first)
+          end
       end
-      nil
+      false
     end
-
-    def look_for_loss
-      #Look for opponents winning move
-      LINES.each do |winning_line|
-        markers = group_positions_by_marker(winning_line)
-        if markers[other_mark].length == 2 and markers.keys.include?(nil)
-          return move_map(markers[nil].first) 
-        end
-      end
-      nil
-    end
-
-
-    def look_for_fork
+    #Looks for a move that would create two winning moves on the following turn
+    # Returns that move is one exists
+    def look_for_fork(marker)
       @board.free_positions.each do |position|
         #byebug
         flat_board = flatten_board
-        flat_board[position] = mark
+        flat_board[position] = marker
         return move_map(position) if possible_fork?(flat_board)
       end
       false
     end
 
-      ## Refactor the Lines logic
+      # Helper function to chec kif there is a possible fork for a given game state
     def possible_fork?(game_state)
       possible_wins = 0
-      LINES.each do |winning_line|
-        markers = group_positions_by_marker(winning_line,game_state)
+      LINES.each do |line|
+        markers = group_positions_by_marker(line,game_state)
         if markers[mark].length == 2 and markers.keys.include?(nil)
-          possible_wins += 1
+          possible_wins += 1 
         end
         return true if possible_wins == 2
       end
+      nil
+    end
+
+    def center_move
+      return [1,1] if board.empty?([1,1])
       false
     end
 
+    def opposite_corner
+      
+      opposite_corner_map = {[0,0] => [2,2], [2,2] => [0,0], [0,2] => [2,0], [2,0] => [0,2]}
+      opposite_corner_map.keys.each do |corner|
+        op_cor = opposite_corner_map[corner]
+        return opposite_corner_map[corner] if board[*corner] == other_mark && board.empty?(op_cor)
+        end
+        false
+     end
 
 
     def random_move
@@ -102,7 +109,6 @@ class ComputerPlayer
       markers.default = []
       markers
     end
-
 
     def move_map(flattened_position)
           move_map = {
@@ -119,8 +125,6 @@ class ComputerPlayer
       move_map[flattened_position]
     end
 
-
-
     def other_mark
       return :X if mark == :O
       :O
@@ -131,6 +135,4 @@ class ComputerPlayer
       #byebug
       @board.flatten  
     end
-
-
 end

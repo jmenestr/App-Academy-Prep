@@ -1,5 +1,5 @@
-require "game"
-require "board"
+require_relative "../game"
+require_relative "../board"
 
 describe "Game" do
   let(:player_one) { double("player", name: "Claire", mark: :X) }
