@@ -1,8 +1,11 @@
 class XmlDocument
   # TODO: your code goes here!
   def initialize(indent = false)
-    @indent = indent
+    @indent_flag = indent
+    @indent_level = 0
   end
+
+  attr_reader :indent_flag, :indent_level
 
   def method_missing(name,*attrs,&blk)
     attrs = attrs[0] || {}
@@ -13,9 +16,11 @@ class XmlDocument
     xml = ""
     if block_given?
       # Create nested tags if block is given
-      xml << "<"+([name] + create_attrs(attrs)).join(" ")+">"
+      xml << open_tag(name,attrs)
+      @indent_level += 1
       xml << blk.call
-      xml << "</#{name}>"
+      @indent_level -= 1
+      xml << close_tag(name)
     else
       # Create solo tag
       xml << lone_tag(name,attrs)
@@ -24,7 +29,27 @@ class XmlDocument
   end
 
   def lone_tag(name,attrs)
-     "<"+([name] + create_attrs(attrs)).join(" ")+"/>"
+     "#{indent}<"+tag_body(name,attrs)+"/>#{newline}"
+  end
+
+  def open_tag(name,attrs)
+    %Q{#{indent}<#{tag_body(name,attrs)}>#{newline}}
+  end
+
+  def close_tag(name)
+    %Q{#{indent}</#{name}>#{newline}}
+  end
+
+  def tag_body(name,attrs)
+    ([name] + create_attrs(attrs)).join(" ")
+  end
+
+  def indent
+    "  " * @indent_level if indent_flag
+  end
+
+  def newline
+    indent_flag ? "\n" : ""
   end
 
   def create_attrs(attrs)
