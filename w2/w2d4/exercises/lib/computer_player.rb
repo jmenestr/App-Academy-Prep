@@ -52,8 +52,8 @@ class ComputerPlayer
         markers = group_positions_by_marker(winning_line)
         if markers[marker].length == 2 and markers.keys.include?(nil)      
             return move_map(markers[nil].first)
-          end
-      end
+        end
+       end
       false
     end
     #Looks for a move that would create two winning moves on the following turn
