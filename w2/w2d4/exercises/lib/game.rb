@@ -5,8 +5,8 @@ require 'byebug'
 
 class Game
   def initialize(player1,player2)
-    @player1 = player1
-    @player2 = player2
+    @player1 = player2
+    @player2 = player1
     player1.mark = :X
     player2.mark = :O
     @current_player = @player1
@@ -26,6 +26,7 @@ class Game
       puts "#{game_winner.name} won!"
     else
       puts "Game was a draw!"
+      current_player.display(board)
     end
 
   end
