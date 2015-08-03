@@ -61,17 +61,6 @@ require 'byebug'
     all_positions
   end
 
-  def valid_position_array?(pos_ary)
-    #takes in array of pos arrays and checks to see if it's valid
-    pos_ary.all? {|pos| inside_grid?(pos) and self[pos].nil?} 
-  end
-
-  def inside_grid?(pos)
-    row = pos[0]
-    column = pos[1]
-    row >= 0 and column >= 0 and row < grid.length and column < gird.first.length
-  end
-
   def populate_grid
     #byebug
     ship_number.times do
@@ -79,10 +68,14 @@ require 'byebug'
     end
   end
 
-  def display(setup = false)
+  def place_ship(pos)
+    self[pos] = :s
+  end
+
+  def display(ships = false)
       display_hash = {
         nil => " ",
-        s: setup ? "s" : " ",
+        s: ships ? "s" : " ",
         x: "x",
         o: "o"
        }
@@ -100,8 +93,9 @@ require 'byebug'
   def place_random_ship
     raise "Board is full" if full?
     #byebug
-    self[empty_positions.sample] = :s
+    place_ship(empty_positions.sample)
   end
+
 
   def full?
     grid.flatten.all? {|pos| !pos.nil?}

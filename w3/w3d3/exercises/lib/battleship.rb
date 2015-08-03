@@ -6,7 +6,7 @@ class BattleshipGame
 
   attr_accessor :current_player, :other_player
 
-  def initialize(player1,player2,setup = false,ships = 1)
+  def initialize(player1,player2,setup = false,ships = 2)
     #byebug
     @current_player = player1
     @other_player = player2
@@ -40,9 +40,13 @@ class BattleshipGame
 
   private 
     def play_turn
-      display(other_player.board)
-      current_player.prompt
+      
       begin 
+        puts "-- Your board --"
+        display(current_player.board, ships = true)
+        puts "-- Your opponents board --"
+        display(other_player.board)
+        current_player.prompt
         move = current_player.get_move(other_player.board)
         attack(other_player.board,move)
       rescue
@@ -72,8 +76,8 @@ class BattleshipGame
       other_player.board.won?
     end
 
-    def display(board)
-      board.display
+    def display(board,ships = false)
+      board.display(ships = ships)
       puts "#{count_ships(board)} ships remain."
     end
 

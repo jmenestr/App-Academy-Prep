@@ -21,5 +21,11 @@ class ComputerPlayer
     move
   end
 
+  def place_ships(ships)
+    ships.times do
+      position = get_move
+      board.place_ship(position)
+    end
+  end
 
 end

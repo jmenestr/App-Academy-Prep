@@ -1,5 +1,4 @@
 
-require_relative "ship"
 class HumanPlayer
 
   attr_accessor :board
@@ -18,22 +17,13 @@ class HumanPlayer
   end
 
   def place_ships(ships)
-    ships = {
-    "Battleship" => Ship.method(:battleship),
-    "Aircraft Carrier" => Ship.method(:aircraft_carrier),
-    "Submarine" => Ship.method(:submarine),
-    "Destroyer" => Ship.method(:destroyer),
-    "Patrol Boat" => Ship.method(:patrol_boat)
-    }
-    puts "Please select the spaces you'd like to put them in (ie 3 4)."
-    ships.keys.each do |s|
-      current_ship = ships[s] #This will be an instance of the ship class
+    
+    ships.times do
+      puts "Please select the spaces you'd like to place a ship (ie 3 4)."
       board.display(setup = true)
-      print "Place your #{ship >> "}
       position = get_move
-      print "What direction do you want your ship to face (n s e w)"
-      direction = gets.chomp.downcase  
-      board[position] = :s
+      board.place_ship(position)
     end
   end
+
 end
