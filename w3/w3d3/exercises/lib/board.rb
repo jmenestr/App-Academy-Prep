@@ -61,6 +61,17 @@ require 'byebug'
     all_positions
   end
 
+  def valid_position_array?(pos_ary)
+    #takes in array of pos arrays and checks to see if it's valid
+    pos_ary.all? {|pos| inside_grid?(pos) and self[pos].nil?} 
+  end
+
+  def inside_grid?(pos)
+    row = pos[0]
+    column = pos[1]
+    row >= 0 and column >= 0 and row < grid.length and column < gird.first.length
+  end
+
   def populate_grid
     #byebug
     ship_number.times do
@@ -69,7 +80,8 @@ require 'byebug'
   end
 
   def display(setup = false)
-      display_hash = {nil => " ",
+      display_hash = {
+        nil => " ",
         s: setup ? "s" : " ",
         x: "x",
         o: "o"
