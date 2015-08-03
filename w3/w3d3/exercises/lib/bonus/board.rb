@@ -1,17 +1,17 @@
+require_relative "ship"
 class Board
 
 require 'byebug'
   def self.default_grid 
-    Array.new(10) {Array.new(10)}
+    Array.new(10) {Array.new(10,nil)}
   end
 
 
   attr_accessor :grid
   attr_reader :ship_number
 
-  def initialize(grid = Board.default_grid, ships)
+  def initialize(grid = Board.default_grid)
     @grid = grid
-    @ship_number = ships
   end
 
   def [](pos)
@@ -33,12 +33,22 @@ require 'byebug'
     self[pos].nil?
     else
       return false if count > 0
-      true
+      return true
     end
   end
 
+  def set_ship(current_ship)
+    #byebug
+    positions = current_ship.positions
+    raise "Ship placement is not valid" unless valid_position_array?(positions)
+    positions.each do |p|
+      self[p] = current_ship
+    end
+
+  end
+
   def has_ship?(pos)
-    self[pos] == :s
+    self[pos].is_a?(Ship)
   end
 
   def empty_positions
@@ -69,7 +79,7 @@ require 'byebug'
   def inside_grid?(pos)
     row = pos[0]
     column = pos[1]
-    row >= 0 and column >= 0 and row < grid.length and column < gird.first.length
+    row >= 0 and column >= 0 and row < grid.length and column < grid.first.length
   end
 
   def populate_grid
@@ -81,19 +91,31 @@ require 'byebug'
 
   def display(setup = false)
       display_hash = {
-        nil => " ",
-        s: setup ? "s" : " ",
-        x: "x",
-        o: "o"
+        x:     "x",
+        o:     "o",
+        nil => " "
        }
       row_sep = "--+-" * grid.length + "\n"
-      col_sep = " | "
-      display_grid = grid.map {|row| row.map {|space| display_hash[space]}}
-      puts display_grid.map {  |row| row.join(col_sep) + " |\n" }.join(row_sep)
+      col_sep = " | " 
+      display_grid = grid.map do |row| 
+        row.map do |space| 
+          
+          if space.is_a?(Ship)
+            if setup
+              space.to_s
+            else
+              " "
+            end
+          else
+            display_hash[space]
+          end
+        end
+      end
+      puts display_grid.map {  |row| "" +row.join(col_sep) + " |\n" }.join(row_sep)
   end
 
   def won?
-    return false if grid.flatten.any? {|pos| pos == :s}
+    return false if grid.flatten.any? {|pos| pos.is_a?(Ship)}
     true
   end
 
