@@ -148,5 +148,5 @@ class ComputerPlayer
 end
 computer = ComputerPlayer.new(ComputerPlayer.dictionary_from_file("dictionary.txt"))
 human = HumanPlayer.new
-Hangman.new(referee: computer, guesser: human).play
+Hangman.new(referee: human, guesser: computer).play
 

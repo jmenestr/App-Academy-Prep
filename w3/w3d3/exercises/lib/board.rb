@@ -2,17 +2,16 @@ class Board
 
 require 'byebug'
   def self.default_grid 
-    Array.new(10) {Array.new(10,nil)}
+    Array.new(10) {Array.new(10)}
   end
 
 
   attr_accessor :grid
   attr_reader :ship_number
 
-  def initialize(grid = Board.default_grid, ships = 15)
+  def initialize(grid = Board.default_grid, ships)
     @grid = grid
     @ship_number = ships
-    populate_grid
   end
 
   def [](pos)
@@ -52,6 +51,16 @@ require 'byebug'
     positions
   end
 
+  def all_positions
+    all_positions = []
+    grid.each_with_index do |row,i|
+      row.each_with_index do |column, j|
+        all_positions << [i,j] 
+      end
+    end
+    all_positions
+  end
+
   def populate_grid
     #byebug
     ship_number.times do
@@ -59,8 +68,12 @@ require 'byebug'
     end
   end
 
-  def display
-      display_hash = {nil => " ", s: " ", x: "x", o: "o"}
+  def display(setup = false)
+      display_hash = {nil => " ",
+        s: setup ? "s" : " ",
+        x: "x",
+        o: "o"
+       }
       row_sep = "--+-" * grid.length + "\n"
       col_sep = " | "
       display_grid = grid.map {|row| row.map {|space| display_hash[space]}}
