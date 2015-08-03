@@ -25,7 +25,7 @@ require 'byebug'
   end
 
   def count
-    grid.flatten.count(:s)
+    grid.flatten.count(Ship)
   end
 
   def empty?(pos = nil)
@@ -82,13 +82,6 @@ require 'byebug'
     row >= 0 and column >= 0 and row < grid.length and column < grid.first.length
   end
 
-  def populate_grid
-    #byebug
-    ship_number.times do
-      place_random_ship
-    end
-  end
-
   def display(setup = false)
       display_hash = {
         x:     "x",
@@ -117,12 +110,6 @@ require 'byebug'
   def won?
     return false if grid.flatten.any? {|pos| pos.is_a?(Ship)}
     true
-  end
-
-  def place_random_ship
-    raise "Board is full" if full?
-    #byebug
-    self[empty_positions.sample] = :s
   end
 
   def full?
