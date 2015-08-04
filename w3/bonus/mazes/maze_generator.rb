@@ -1,6 +1,7 @@
-
+ require_relative "maze_solver"
+ require 'byebug'
 class MazeGenerator
-  def initialize(width,height)
+  def initialize(width,height,options = {})
     @width = width
     @height = height
     @start_x = Random.rand(width)
@@ -11,26 +12,39 @@ class MazeGenerator
     @vertical_walls = Grid.new(width,height,true)
     @visited = Grid.new(width,height)
 
+    @default = {start: "S", finish: "E"}
+    @options = @default.merge(options)
+
     @horizontal_walls[@end_x,@end_y] = false
+
     generate_maze
   end
 
   def print
-    puts @width.times.inject("+") {|str,x| str << (x == @start_x ?  "-S+" : "--+")}
-    @height.times do |y|
-      puts @width.times.inject("|") { |str,x| str << "  " + (@vertical_walls[x,y] ? "|" : " ")}
-      puts @width.times.inject("+") {|str,x| str <<  (@horizontal_walls[x,y] ? "--+" : "  +")}
+    puts @width.times.inject("+") {|str,x| str << (x == @start_x ?  "-#{@options[:start]}+" : "--+")}
+    (@height).times do |y|
+      puts @width.times.inject("|") { |str,x| str << "  " + (@vertical_walls[x,y] ? "|" : " ")}    
+      if y == @height-1
+        puts @width.times.inject("+") {|str,x| str <<  (@horizontal_walls[x,y] ? "--+" : "-#{@options[:finish]}+")}
+      else
+        puts @width.times.inject("+") {|str,x| str <<  (@horizontal_walls[x,y] ? "--+" : "  +")}
+      end
     end
   end
 
   def file
     file = "maze-#{Random.rand(100)}.txt"
     File.open(file,"w") do |f|
-      f.puts @width.times.inject("+") {|str,x| str << (x == @start_x ?  "-S+" : "--+")}
+      f.puts @width.times.inject("+") {|str,x| str << (x == @start_x ?  "-#{@options[:start]}+" : "--+")}
       @height.times do |y|
         f.puts @width.times.inject("|") { |str,x| str << "  " + (@vertical_walls[x,y] ? "|" : " ")}
-        f.puts @width.times.inject("+") {|str,x| str <<  (@horizontal_walls[x,y] ? "--+" : "  +")}
+        if y == @height - 1
+          f.puts @width.times.inject("+") {|str,x| str <<  (@horizontal_walls[x,y] ? "--+" : "#{@options[:finish]}-+")}
+        else
+          f.puts @width.times.inject("+") {|str,x| str <<  (@horizontal_walls[x,y] ? "--+" : "  +")}
+        end
       end
+      file
     end
 
   end
@@ -65,7 +79,7 @@ class MazeGenerator
   end
 
   def get_moves(x,y)
-    delta = [[1,0],[1,0],[-1,0],[-1,0],[0,1],[0,-1]]
+    delta = [[1,0],[-1,0],[0,1],[0,-1]]
     delta.map{ |dx,dy| [x + dx, y + dy]}
   end
 

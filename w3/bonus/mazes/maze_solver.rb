@@ -9,6 +9,7 @@ class MazeSolver
       line.chomp
       @grid << line.chomp.split("")
     end
+    @name = maze
     @width = grid.first.length
     @height = grid.length
     @cells = []
@@ -17,8 +18,8 @@ class MazeSolver
     @finish = find_end   
     @open_cells = [@start]
     @closed_cells = []
-    @path = []
     solve
+    to_s
   end
 
   def solve
@@ -30,8 +31,6 @@ class MazeSolver
       closed_cells << cell
       if cell == finish
         return get_parents
-        break
-        #display maze
       end
       get_adjacent_cells(cell).each do |adj_cell|
         
@@ -66,6 +65,13 @@ class MazeSolver
     display.join("\n")
   end
 
+  def to_file
+    basename = File.basename(@name,".*")
+    File.open("#{basename}-solution.txt","w") do |f|
+      f.puts to_s
+    end
+  end
+
   def get_cell(row,col)
     @cells.find {|cell| cell.row == row and cell.column == col}
   end
@@ -95,8 +101,9 @@ class MazeSolver
     cell = finish
     while cell.parent != start
       cell = cell.parent
-      self[[cell.row, cell.column]] = "X"  
+      self[[cell.row, cell.column]] = "X"
     end   
+
   end
 
   def inside_maze?(pos)
@@ -169,5 +176,3 @@ end
 
 
 
-x = MazeSolver.new("maze-72.txt")
-puts x.to_s
