@@ -175,4 +175,4 @@ class Cell
 end
 
 
-
+MazeSolver.new('maze-75.txt').to_file

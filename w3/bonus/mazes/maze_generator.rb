@@ -105,4 +105,4 @@ class Grid
   end
 end
 
-MazeGenerator.new(20,20).file
+MazeGenerator.new(30,30).file
