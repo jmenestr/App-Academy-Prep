@@ -18,6 +18,7 @@ class MazeSolver
     @open_cells = [@start]
     @closed_cells = []
     @path = []
+    solve
   end
 
   def solve
@@ -168,6 +169,5 @@ end
 
 
 
-x = MazeSolver.new("maze1.txt")
-x.solve
+x = MazeSolver.new("maze-72.txt")
 puts x.to_s
