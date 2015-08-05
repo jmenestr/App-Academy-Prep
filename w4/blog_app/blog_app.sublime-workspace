@@ -243,6 +243,13 @@
 	},
 	"buffers":
 	[
+		{
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -393,49 +400,6 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
-	"expanded_folders":
-	[
-		"/Users/jmenestr/Desktop/App Academy Prep",
-		"/Users/jmenestr/Desktop/App Academy Prep/cloud9",
-		"/Users/jmenestr/Desktop/App Academy Prep/solutions",
-		"/Users/jmenestr/Desktop/App Academy Prep/solutions/w1/w1d4",
-		"/Users/jmenestr/Desktop/App Academy Prep/solutions/w2/w2d3",
-		"/Users/jmenestr/Desktop/App Academy Prep/solutions/w2/w2d4",
-		"/Users/jmenestr/Desktop/App Academy Prep/solutions/w3/w3d3",
-		"/Users/jmenestr/Desktop/App Academy Prep/solutions/w3/w3d4",
-		"/Users/jmenestr/Desktop/App Academy Prep/w0/readings",
-		"/Users/jmenestr/Desktop/App Academy Prep/w1/w1d1/exercises",
-		"/Users/jmenestr/Desktop/App Academy Prep/w1/w1d1/exercises/lib",
-		"/Users/jmenestr/Desktop/App Academy Prep/w1/w1d1/exercises/lib/spec",
-		"/Users/jmenestr/Desktop/App Academy Prep/w1/w1d2/exercises",
-		"/Users/jmenestr/Desktop/App Academy Prep/w1/w1d2/exercises/lib",
-		"/Users/jmenestr/Desktop/App Academy Prep/w1/w1d3/exercises",
-		"/Users/jmenestr/Desktop/App Academy Prep/w1/w1d3/exercises/lib",
-		"/Users/jmenestr/Desktop/App Academy Prep/w1/w1d3/readings",
-		"/Users/jmenestr/Desktop/App Academy Prep/w1/w1d4/exercises/lib",
-		"/Users/jmenestr/Desktop/App Academy Prep/w1/w1d4/exercises/lib/spec",
-		"/Users/jmenestr/Desktop/App Academy Prep/w1/w1d5/readings",
-		"/Users/jmenestr/Desktop/App Academy Prep/w2/w2d1/exercises/lib",
-		"/Users/jmenestr/Desktop/App Academy Prep/w2/w2d2/exercises/lib",
-		"/Users/jmenestr/Desktop/App Academy Prep/w2/w2d3/exercises/lib",
-		"/Users/jmenestr/Desktop/App Academy Prep/w2/w2d3/readings",
-		"/Users/jmenestr/Desktop/App Academy Prep/w2/w2d4",
-		"/Users/jmenestr/Desktop/App Academy Prep/w2/w2d4/exercises/lib",
-		"/Users/jmenestr/Desktop/App Academy Prep/w2/w2d4/exercises/lib/spec",
-		"/Users/jmenestr/Desktop/App Academy Prep/w3",
-		"/Users/jmenestr/Desktop/App Academy Prep/w3/bonus",
-		"/Users/jmenestr/Desktop/App Academy Prep/w3/bonus/mazes",
-		"/Users/jmenestr/Desktop/App Academy Prep/w3/w3d1/exercises",
-		"/Users/jmenestr/Desktop/App Academy Prep/w3/w3d1/exercises/lib",
-		"/Users/jmenestr/Desktop/App Academy Prep/w3/w3d1/exercises/lib/spec",
-		"/Users/jmenestr/Desktop/App Academy Prep/w3/w3d2/exercises/lib",
-		"/Users/jmenestr/Desktop/App Academy Prep/w3/w3d2/exercises/lib/spec",
-		"/Users/jmenestr/Desktop/App Academy Prep/w3/w3d3/exercises/lib/bonus",
-		"/Users/jmenestr/Desktop/App Academy Prep/w3/w3d4",
-		"/Users/jmenestr/Desktop/App Academy Prep/w3/w3d4/exercises/lib",
-		"/Users/jmenestr/Desktop/App Academy Prep/w3/w3d4/exercises/lib/spec",
-		"/Users/jmenestr/Desktop/App Academy Prep/w4"
-	],
 	"file_history":
 	[
 		"/Users/jmenestr/Desktop/App Academy Prep/w3/bonus/mazes/maze-80.txt",
@@ -569,7 +533,7 @@
 	],
 	"find":
 	{
-		"height": 46.0
+		"height": 30.0
 	},
 	"find_in_files":
 	{
@@ -735,8 +699,36 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -784,7 +776,7 @@
 		"height": 140.0
 	},
 	"pinned_build_system": "",
-	"project": "aA_prep.sublime-project",
+	"project": "blog_app.sublime-project",
 	"replace":
 	{
 		"height": 56.0
