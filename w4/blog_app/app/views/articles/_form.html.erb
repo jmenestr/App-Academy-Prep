@@ -1,0 +1,18 @@
+<%= form_for(@article) do |f|  %>
+  <ul>
+    <% @article.errors.full_messages.each do |error| %>
+      <li><%= error %></li>
+    <% end  %>
+  </ul>
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :body %>
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit @article.new_record? ? "Create New Article": "Update Article" %>
+  </p>
+<% end  %>
