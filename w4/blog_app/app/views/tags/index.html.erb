@@ -1,0 +1,20 @@
+<h1>All Tags</h1>
+
+<ul id="tags">
+  <% @tags.each do |tag| %>
+    <li>
+       Tag: <%= link_to tag.name, tag_path(tag), class: 'tag' %>
+      <% if logged_in? %>
+        <%= link_to "delete", tag_path(tag), method: :delete %>
+      <% end %>
+       <% unless tag.articles.empty? %>
+        <ul>
+        <% tag.articles.each do |article| %>
+          <li class="comment"><%= article.title %> </li>
+          <% end %>
+        </ul>
+
+       <% end %>
+    </li>
+  <% end  %>
+</ul>
